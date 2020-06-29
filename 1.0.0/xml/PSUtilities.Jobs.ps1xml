@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<Configuration>
+    <ViewDefinitions>
+        <!-- PSUtilities.Jobs -->
+        <View>
+            <Name>PSUtilities.Jobs</Name>
+            <ViewSelectedBy>
+                <TypeName>PSUtilities.Jobs</TypeName>
+            </ViewSelectedBy>
+            <TableControl>
+                <AutoSize/>
+                <TableHeaders>
+                     <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>Name</Label>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>Command</Label>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>Data</Label>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <TableColumnItems>
+                            <TableColumnItem>
+                                <PropertyName>Index</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                            <ScriptBlock>
+<!-- Scriptjob to format output for Name -->
+[string]${ _ } = $_.Name
+if(${ _ }.Length -gt 15){${ _ }.SubString(0,10) + "..."}
+else{${ _ }}
+                                </ScriptBlock>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>JobID</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>TypeofJob</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>JobState</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Executed</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>ContainsData</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <ScriptBlock>
+<!-- Scriptjob to format output for Command -->
+if($_.Command.Length -gt 2)
+{
+    [string]${ _ _ } = $_.Command
+}
+if(${ _ _ }.Length -gt 15){${ _ _ }.SubString(0,20) + "..."}
+else{${ _ _ }}
+                                </ScriptBlock>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <ScriptBlock>
+<!-- Scriptjob to format output for Data -->
+if(@($_.Data).Count -lt 2)
+{
+    [string]${ _ _ _ } = $_.Data
+}
+else
+{
+    [string]${ _ _ _ } = '{' + ($_.Data -join ', ') + '}'
+}
+if(${ _ _ _ }.Length -gt 15){${ _ _ _ }.SubString(0,25) + "..."}
+else{${ _ _ _ }}
+                                </ScriptBlock>
+                            </TableColumnItem>
+                        </TableColumnItems>
+                    </TableRowEntry>
+                </TableRowEntries>
+            </TableControl>
+        </View>
+    </ViewDefinitions>
+</Configuration>

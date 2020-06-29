@@ -1,0 +1,12 @@
+﻿TOPIC
+	about_PSUtilities
+	
+SHORT DESCRIPTION
+	A short synopsis of PSUtilities
+
+LONG DESCRIPTION
+	A more detailed description of PSUtilities,
+	Should tell the user how to get started with this module.
+	
+KEYWORDS
+	module development debugging
