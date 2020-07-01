@@ -50,7 +50,8 @@
 	# Functions to export from this module
 	FunctionsToExport = @(
 	'Get-Sessions'
-	'Get-JobTypes')
+	'Get-JobTypes'
+	'Get-ModulePath')
 
 	# Cmdlets to export from this module
 	CmdletsToExport = ''
