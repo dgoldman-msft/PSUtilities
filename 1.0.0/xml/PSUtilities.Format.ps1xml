@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-16"?>
+<?xml version="1.0" encoding="utf-16"?>
 <Configuration>
-    <ViewDefinitions>
+	<ViewDefinitions>
         <!-- PSUtilities.Jobs -->
         <View>
             <Name>PSUtilities.Jobs</Name>
@@ -56,19 +56,19 @@ else{${ _ }}
                                 </ScriptBlock>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>JobID</PropertyName>
+                                <PropertyName>Job ID</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>TypeofJob</PropertyName>
+                                <PropertyName>Job Type</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>JobState</PropertyName>
+                                <PropertyName>Job State</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
                                 <PropertyName>Executed</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>ContainsData</PropertyName>
+                                <PropertyName>Contains Data</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
                                 <ScriptBlock>
@@ -97,6 +97,79 @@ else{${ _ _ _ }}
                                 </ScriptBlock>
                             </TableColumnItem>
                         </TableColumnItems>
+                    </TableRowEntry>
+                </TableRowEntries>
+            </TableControl>
+        </View>
+
+        <!-- PSUtilities.Sessions -->
+        <View>
+            <Name>PSUtilities.Sessions</Name>
+            <ViewSelectedBy>
+                <TypeName>PSUtilities.Sessions</TypeName>
+            </ViewSelectedBy>
+            <TableControl>
+                <AutoSize/>
+                <TableHeaders>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                     <TableColumnHeader>
+                        <Alignment>Center</Alignment>
+                    </TableColumnHeader>
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <TableColumnItems>
+                            <TableColumnItem>
+                                <PropertyName>Id</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Name</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Computer Name</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Type</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Session State</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Versions Supported</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Server Config</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>Is Availabile</PropertyName>
+                            </TableColumnItem>
+                             <TableColumnItem>
+                                <PropertyName>Port</PropertyName>
+                            </TableColumnItem>
+                         </TableColumnItems>
                     </TableRowEntry>
                 </TableRowEntries>
             </TableControl>

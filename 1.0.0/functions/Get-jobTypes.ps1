@@ -1,5 +1,4 @@
-﻿function Get-JobTypes
-{
+﻿function Get-JobTypes {
 	<#
 		.Synopsis
 			Custom PowerShell Job reporter
@@ -22,37 +21,34 @@
 	[CmdletBinding(DefaultParameterSetName = "Default")]
 	param()
 
-	process
-	{
-		try
-		{
+	process {
+		try {
 			$index = 0
-			foreach ($job in (Get-Job))
-			{
+			foreach ($job in (Get-Job)) {
 				# Store the job so we can display it with a custom display - 16 properties
 				[PSCustomObject]@{
-					PSTypeName = 'PSUtilities.Jobs'
-					Index = $index
-					Name = $job.Name
-					JobId = $job.id
-					'Job Start Time' = $job.PSBeginTime
-					'Job End Time' = $job.PSEndTime
+					PSTypeName        = 'PSUtilities.Jobs'
+					Index             = $index
+					Name              = $job.Name
+					'Job Id'          = $job.id
+					'Job Start Time'  = $job.PSBeginTime
+					'Job End Time'    = $job.PSEndTime
 					'Child Job Id(s)' = $job.ChildJobs
-					TypeOfJob = $job.PSJobTypeName
-					JobState = $job.State
-					ContainsData = $job.HasMoreData
-					Executed = $job.Location
-					Command = $job.Command
-					Data = (Receive-Job -Name $job.Name -Keep)
-					'Status Message' = $job.StatusMessage
-					'Job Warning' = $job.Warning
-					'Job Error' = $job.Error}
+					'Job Type'     = $job.PSJobTypeName
+					'Job State'       = $job.State
+					'Contains Data'   = $job.HasMoreData
+					Executed          = $job.Location
+					Command           = $job.Command
+					Data              = (Receive-Job -Name $job.Name -Keep)
+					'Status Message'  = $job.StatusMessage
+					'Job Warning'     = $job.Warning
+					'Job Error'       = $job.Error
+    }
 				$index++
 			}
 		}
-		catch
-		{
+		catch {
 			Stop-PSFFunction -Message "ERROR: Get-Job failure" -Cmdlet $PSCmdlet -ErrorRecord $_
-        }
+		}
 	}
 }

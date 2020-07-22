@@ -8,25 +8,25 @@
 
 @{
 	# Script module or binary module file associated with this manifest
-	RootModule = 'PSUtilities.psm1'
+	RootModule        = 'PSUtilities.psm1'
 
 	# Version number of this module.
-	ModuleVersion = '1.0.0'
+	ModuleVersion     = '1.0.0'
 
 	# ID used to uniquely identify this module
-	GUID = '30a89410-c344-40c5-9001-02eab8fac78b'
+	GUID              = '30a89410-c344-40c5-9001-02eab8fac78b'
 
 	# Author of this module
-	Author = 'Dave Goldman'
+	Author            = 'Dave Goldman'
 
 	# Company or vendor of this module
-	CompanyName = ' '
+	CompanyName       = ' '
 
 	# Copyright statement for this module
-	Copyright = 'Copyright (c) 2020 Dave Goldman'
+	Copyright         = 'Copyright (c) 2020 Dave Goldman'
 
 	# Description of the functionality provided by this module
-	Description = 'PSUtilities'
+	Description       = 'PSUtilities'
 
 	# Minimum version of the Windows PowerShell engine required by this module
 	PowerShellVersion = '5.0'
@@ -43,38 +43,37 @@
 
 	# Format files (.ps1xml) to be loaded when importing this module.
 	# Expensive for import time, no more than one should be used.
-	FormatsToProcess = @(
-	'xml\PSUtilities.Sessions.ps1xml'
-	'xml\PSUtilities.Jobs.ps1xml')
+	FormatsToProcess  = @(
+		'xml\PSUtilities.Format.ps1xml')
 
 	# Functions to export from this module
 	FunctionsToExport = @(
-	'Get-Sessions'
-	'Get-JobTypes'
-	'Get-ModulePath')
+		'Get-Sessions'
+		'Get-JobTypes'
+		'Get-ModulePath')
 
 	# Cmdlets to export from this module
-	CmdletsToExport = ''
+	CmdletsToExport   = ''
 
 	# Variables to export from this module
 	VariablesToExport = ''
 
 	# Aliases to export from this module
-	AliasesToExport = @(
-	'gmp'
-	'gjt')
+	AliasesToExport   = @(
+		'gmp'
+		'gjt')
 
 	# List of all files packaged with this module
-	FileList = @()
+	FileList          = @()
 
 	# Private data to pass to the module specified in ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
-	PrivateData = @{
+	PrivateData       = @{
 
 		#Support for PowerShellGet galleries.
 		PSData = @{
 
 			# Tags applied to this module. These help with module discovery in online galleries.
-			Tags = @('Utilities')
+			Tags       = @('Utilities')
 
 			# A URL to the license for this module.
 			# LicenseUri = ''

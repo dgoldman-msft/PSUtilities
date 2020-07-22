@@ -1,5 +1,4 @@
-Function Get-ModulePath
-{
+Function Get-ModulePath {
 	<#
 		.Synopsis
             Cmdlet for dumping out module paths
@@ -18,12 +17,11 @@ Function Get-ModulePath
 	[CmdletBinding(DefaultParameterSetName = "Default")]
 	param()
 
-	begin{}
-	process
-	{
+	begin {}
+	process {
 		Write-PSFMessage -Level Verbose -Message "Getting Module Paths"
 		"-" * 20
 		$env:PSModulePath -split ";"
 	}
-	end{}
+	end {}
 }
