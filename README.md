@@ -5,10 +5,11 @@ This module will work with PSjobs and PSSessions and has a few helper functions 
 
 
 ### Getting Started with PSUtilities
-1. Clone this project locally
-2. Copy the entire PSUtilities directory
-3. Place it in your PowerShell module path - c:\Users\UserName\Documents\WindowsPowerShell\Modules
-3. Run the following command:
+1. Fork this repository
+2. Clone this project locally
+3. Copy the entire PSUtilities directory
+4. Place it in your user's PowerShell module path - c:\Users\UserName\Documents\WindowsPowerShell\Modules
+5. Run the following command:
 
 ```powershell
 Import-Module PSUtilities
