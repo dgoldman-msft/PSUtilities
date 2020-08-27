@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-16"?>
 <Configuration>
 	<ViewDefinitions>
-        <!-- PSUtilities.Jobs -->
+        <!-- PowershellUtilities.Jobs -->
         <View>
-            <Name>PSUtilities.Jobs</Name>
+            <Name>PowershellUtilities.Jobs</Name>
             <ViewSelectedBy>
-                <TypeName>PSUtilities.Jobs</TypeName>
+                <TypeName>PowershellUtilities.Jobs</TypeName>
             </ViewSelectedBy>
             <TableControl>
                 <AutoSize/>
                 <TableHeaders>
-                     <TableColumnHeader>
+                    <TableColumnHeader>
                         <Alignment>Center</Alignment>
                     </TableColumnHeader>
                     <TableColumnHeader>
@@ -48,7 +48,7 @@
                                 <PropertyName>Index</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                            <ScriptBlock>
+                                <ScriptBlock>
 <!-- Scriptjob to format output for Name -->
 [string]${ _ } = $_.Name
 if(${ _ }.Length -gt 15){${ _ }.SubString(0,10) + "..."}
@@ -56,29 +56,27 @@ else{${ _ }}
                                 </ScriptBlock>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>Job ID</PropertyName>
+                                <PropertyName>JobID</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>Job Type</PropertyName>
+                                <PropertyName>TypeofJob</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>Job State</PropertyName>
+                                <PropertyName>JobState</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
                                 <PropertyName>Executed</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>Contains Data</PropertyName>
+                                <PropertyName>ContainsData</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
                                 <ScriptBlock>
 <!-- Scriptjob to format output for Command -->
-if($_.Command.Length -gt 2)
-{
-    [string]${ _ _ } = $_.Command
-}
-if(${ _ _ }.Length -gt 15){${ _ _ }.SubString(0,20) + "..."}
+[string]${ _ _ } = $_.Command
+if(${ _ _ }.Length -gt 15){${ _ _ }.SubString(0,10) + "..."}
 else{${ _ _ }}
+
                                 </ScriptBlock>
                             </TableColumnItem>
                             <TableColumnItem>
@@ -92,7 +90,7 @@ else
 {
     [string]${ _ _ _ } = '{' + ($_.Data -join ', ') + '}'
 }
-if(${ _ _ _ }.Length -gt 15){${ _ _ _ }.SubString(0,25) + "..."}
+if(${ _ _ _ }.Length -gt 15){${ _ _ _ }.SubString(0,15) + "..."}
 else{${ _ _ _ }}
                                 </ScriptBlock>
                             </TableColumnItem>
