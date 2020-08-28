@@ -3,9 +3,9 @@
 	<ViewDefinitions>
         <!-- PowershellUtilities.Jobs -->
         <View>
-            <Name>PowershellUtilities.Jobs</Name>
+            <Name>PSUtilities.Jobs</Name>
             <ViewSelectedBy>
-                <TypeName>PowershellUtilities.Jobs</TypeName>
+                <TypeName>PSUtilities.Jobs</TypeName>
             </ViewSelectedBy>
             <TableControl>
                 <AutoSize/>
