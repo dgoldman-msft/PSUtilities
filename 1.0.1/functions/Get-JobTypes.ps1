@@ -48,7 +48,7 @@
 			}
 		}
 		catch {
-			Stop-PSFFunction -Message "ERROR: Get-Job failure" -Cmdlet $PSCmdlet -ErrorRecord $_
+			Stop-PSFFunction -String 'Get-JobTypes.Message1' -Cmdlet $PSCmdlet -ErrorRecord $_
 		}
 	}
 }
