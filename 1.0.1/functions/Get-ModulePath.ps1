@@ -19,7 +19,7 @@ Function Get-ModulePath {
 
 	begin {}
 	process {
-		Write-PSFMessage -Level Verbose -Message "Getting Module Paths"
+		Write-PSFMessage -Level Verbose -String 'Get-ModulePath.Message1'
 		"-" * 20
 		$env:PSModulePath -split ";"
 	}

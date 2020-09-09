@@ -1,12 +1,11 @@
 ﻿TOPIC
 	about_PSUtilities
-	
+
 SHORT DESCRIPTION
-	A short synopsis of PSUtilities
+	A helper module to show PSType Defines
 
 LONG DESCRIPTION
-	A more detailed description of PSUtilities,
-	Should tell the user how to get started with this module.
-	
+	This module has two examples for Jobs and Sessions and how they are formatted using a Types and Format.ps1xml file
+
 KEYWORDS
 	module development debugging

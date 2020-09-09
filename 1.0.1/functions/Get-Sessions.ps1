@@ -19,7 +19,7 @@
 	begin {}
 
 	process {
-		Write-PSFMessage -Level Verbose  -Message "Retreiving Sessions"
+		Write-PSFMessage -Level Verbose  -String 'Get-Sessions.Message1'
 		try {
 			foreach ($session in Get-PSSession) {
 				if ($session.Name -like 'ExchangeOnline*') { [string]$Name = 'Exo' }
@@ -55,7 +55,7 @@
 			}
 		}
 		catch {
-			Stop-PSFFunction -Message "ERROR: Get-Session failure" -Cmdlet $PSCmdlet -ErrorRecord $_
+			Stop-PSFFunction -String 'Get-Sessions.Message2' -Cmdlet $PSCmdlet -ErrorRecord $_
 		}
 	}
 	end {}
